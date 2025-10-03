@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Urbanist', sans-serif;
+}
+
+body {
+  background: #fff;
+}
+
+.container {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+}
+
+/* Gradient Background */
+#bg-gradient {
+  position: absolute;
+  width: 90vw;
+  height: 100vh;
+  bottom: -50%;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  background-color: #0032BA; /* Default Color */
+  border-radius: 50%;
+  z-index: -1;
+  filter: blur(500px);
+  opacity: 0.5;
+  transition: background-color 0.3s ease;
+}
+
+.theme-picker h1 {
+  font-size: clamp(2rem, 5vw, 3.2rem); /* Responsive font size */
+  max-width: 600px;
+  margin: 0 auto 10px auto;
+  color: #0032BA; /* Default text color */
+  transition: color 0.3s ease;
+}
+
+.theme-picker p {
+  font-size: clamp(1rem, 2.5vw, 1.2rem);
+  max-width: 500px;
+  margin: 0 auto 20px auto;
+  color: #656565;
+}
+
+.theme-buttons button {
+  height: 40px;
+  width: 60px;
+  border: 1px solid #909090;
+  border-radius: 20px;
+  margin: 0 6px;
+  cursor: pointer; /* Shows pointer on hover */
+  transition: transform 0.17s ease, border 0.17s ease;
+}
+
+/* Subtle scale and border effect on hover and focus */
+.theme-buttons button:hover,
+.theme-buttons button:focus {
+  transform: scale(1.08);
+  border: 2px solid #333;
+  outline: none;
+}
+
+/* Individual button colors aligned with themes */
+#btn-1 { background-color: #4E00BA; } /* Purple */
+#btn-2 { background-color: #0066BA; } /* Blue */
+#btn-3 { background-color: #BA3500; } /* Orange */
+#btn-4 { background-color: #BA0088; } /* Magenta */
+#btn-5 { background-color: #BA7C00; } /* Yellowish */
